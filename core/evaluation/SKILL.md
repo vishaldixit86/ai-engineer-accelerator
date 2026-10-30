@@ -40,3 +40,31 @@ Use when the engineer requests relevant analysis, creation, change validation or
 
 ## Exit criteria
 A teammate can understand the source evidence, reproduce the reasoning, review the work, and identify unresolved risks. Never substitute a generic checklist for actual investigation.
+
+## Worked scenario: banking / FinCrime
+**Example request:** Measure retrieval correctness and groundedness for 50 synthetic FinCrime investigation cases.
+
+**Expected acceptance evidence:** Fixture sources, metrics, baselines, thresholds, negative cases and run metadata recorded.
+
+### Practical checklist
+- Inspect real source and supporting configuration before claiming project behavior.
+- Identify affected stakeholders, data flows, access rules and operational failure conditions.
+- Document what is verified, what is inferred and what is blocked by missing context.
+- Choose proportionate validation, capture results and keep sensitive details in the private workspace.
+- Make the artifact usable by a reviewer, future maintainer and project owner.
+
+### Common failure patterns
+- Inventing accuracy numbers.
+- mixing subjective judgment with deterministic metrics..
+
+### Challenge questions
+- What is the gold label?
+- What cases fail?
+- How robust are scores across datasets?
+
+### Acceptance checklist
+- [ ] Actual project files and behavior inspected.
+- [ ] Decision or diagnosis uses source evidence and records uncertainties.
+- [ ] Security boundaries and compatibility risks addressed if applicable.
+- [ ] Verification records distinguish PASS, FAIL and NOT RUN.
+- [ ] Handover and next steps are unambiguous and repeatable.
