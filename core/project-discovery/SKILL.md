@@ -58,3 +58,31 @@ Trigger: repo name or issue; permission to read files. Accept a terse user reque
 
 ## Completion criteria
 Close only when the requested outcome is implemented or explicitly blocked, changed files and decisions are identified, tests are accurately reported, and residual risks are visible. Never claim production readiness from a prompt alone.
+
+## Worked scenario: banking / FinCrime
+**Example request:** Explore the route GET /investigations and identify where identity, authorization, retrieval and response formatting occur.
+
+**Expected acceptance evidence:** Entry point is verified; every important call is tied to a real symbol; external services and run commands are marked verified or unknown.
+
+### Practical checklist
+- Inspect the actual project and record relevant file and function names before offering conclusions.
+- Trace input, output, error and permission flows across module boundaries.
+- Distinguish the current implementation from the proposed or hypothetical design.
+- Select checks that can prove or disprove the main risk rather than simply increasing test counts.
+- Ensure new artifacts stay in the authorized project and can be reviewed by a second engineer.
+
+### Frequent failure patterns to avoid
+- Only reading README.
+- assuming framework conventions.
+- confusing static imports with runtime dispatch..
+
+### Review prompts
+- How does a new developer safely run this?
+- What data enters or leaves the service?
+- Which configurations are required?
+
+### Final self-check
+1. Did I answer the actual user request rather than an adjacent general question?
+2. Are every reported file path, behavior and test result backed by evidence?
+3. Did I include security, failure, rollback and downstream effects when relevant?
+4. Can another engineer act on the recommendations without inventing missing details?
