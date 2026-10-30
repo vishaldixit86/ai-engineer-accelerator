@@ -39,3 +39,30 @@ Use when the engineer requests relevant analysis, creation, change validation or
 
 ## Exit criteria
 A teammate can understand the source evidence, reproduce the reasoning, review the work, and identify unresolved risks. Never substitute a generic checklist for actual investigation.
+
+## Worked scenario: banking / FinCrime
+**Example request:** Trace an investigation request from FastAPI through hybrid retrieval and generated citations.
+
+**Expected acceptance evidence:** Verified ordered file::symbol path, async boundaries, data transforms, permissions and unresolved dynamic links.
+
+### Practical checklist
+- Inspect real source and supporting configuration before claiming project behavior.
+- Identify affected stakeholders, data flows, access rules and operational failure conditions.
+- Document what is verified, what is inferred and what is blocked by missing context.
+- Choose proportionate validation, capture results and keep sensitive details in the private workspace.
+- Make the artifact usable by a reviewer, future maintainer and project owner.
+
+### Common failure patterns
+- Claiming an unverified code path exists.
+- listing imports as actual call order..
+
+### Challenge questions
+- Which call owns authorization?
+- Which failures produce fallback?
+
+### Acceptance checklist
+- [ ] Actual project files and behavior inspected.
+- [ ] Decision or diagnosis uses source evidence and records uncertainties.
+- [ ] Security boundaries and compatibility risks addressed if applicable.
+- [ ] Verification records distinguish PASS, FAIL and NOT RUN.
+- [ ] Handover and next steps are unambiguous and repeatable.
