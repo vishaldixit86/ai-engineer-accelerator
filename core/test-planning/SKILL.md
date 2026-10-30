@@ -36,3 +36,31 @@ Scope and sources; prioritized findings table; affected files and rationale; tes
 
 ## Completion
 The results must let another engineer reproduce the checks and decide whether work is safe to proceed. No invented approvals or results.
+
+## Worked scenario: banking / FinCrime
+**Example request:** Create a test plan for user-scoped retrieval across document text, tables, graph links and model citations.
+
+**Expected acceptance evidence:** Positive and negative cases cover each access boundary; fixtures are deterministic; results distinguish run from planned.
+
+### Practical checklist
+- Inspect the actual project and record relevant file and function names before offering conclusions.
+- Trace input, output, error and permission flows across module boundaries.
+- Distinguish the current implementation from the proposed or hypothetical design.
+- Select checks that can prove or disprove the main risk rather than simply increasing test counts.
+- Ensure new artifacts stay in the authorized project and can be reviewed by a second engineer.
+
+### Frequent failure patterns to avoid
+- Only happy-path unit tests.
+- using private production examples.
+- conflating model-generated assertions with evidence..
+
+### Review prompts
+- What proves isolation?
+- How is a deleted assignment handled?
+- What if the graph and vector index disagree?
+
+### Final self-check
+1. Did I answer the actual user request rather than an adjacent general question?
+2. Are every reported file path, behavior and test result backed by evidence?
+3. Did I include security, failure, rollback and downstream effects when relevant?
+4. Can another engineer act on the recommendations without inventing missing details?
