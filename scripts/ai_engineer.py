@@ -50,12 +50,12 @@ def install(project, pack=None, dry_run=False):
         raise ValueError("Refusing to overwrite modified project files: " + ", ".join(conflicts))
     additions = [p for p in desired if not p.exists()]
     if not dry_run:
+        record = dest / ".ai-engineer-install.json"
+        if record.exists():
+            raise ValueError("Install record already exists; review before modifying")
         for p in additions:
             p.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(desired[p], p)
-        record = dest / ".ai-engineer-install.json"
-        if record.exists():
-            raise ValueError("Install record already exists; review before modifying") 
         hashes = {str(p.relative_to(dest)).replace("\\","/"): hashlib.sha256(p.read_bytes()).hexdigest() for p in desired}
         record.write_text(json.dumps({"pack":pack,"files":hashes},indent=2)+"\n", encoding="utf-8")
     return {"pack":pack or "core","planned_additions":len(additions),"managed_files":len(desired),"dry_run":dry_run}
