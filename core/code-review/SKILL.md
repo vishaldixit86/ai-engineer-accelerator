@@ -57,3 +57,31 @@ Trigger: diff, PR or patchset. Accept a terse user request; infer an initial exp
 
 ## Completion criteria
 Close only when the requested outcome is implemented or explicitly blocked, changed files and decisions are identified, tests are accurately reported, and residual risks are visible. Never claim production readiness from a prompt alone.
+
+## Worked scenario: banking / FinCrime
+**Example request:** Review a PR that changes GraphRAG retrieval and case-level filtering.
+
+**Expected acceptance evidence:** Findings are actionable and location-specific; changed contracts and tests inspected; severity reflects actual impact.
+
+### Practical checklist
+- Inspect the actual project and record relevant file and function names before offering conclusions.
+- Trace input, output, error and permission flows across module boundaries.
+- Distinguish the current implementation from the proposed or hypothetical design.
+- Select checks that can prove or disprove the main risk rather than simply increasing test counts.
+- Ensure new artifacts stay in the authorized project and can be reviewed by a second engineer.
+
+### Frequent failure patterns to avoid
+- Generic style comments.
+- inventing vulnerabilities.
+- failing to inspect surrounding caller behavior..
+
+### Review prompts
+- Could a tool bypass search filters?
+- Does cached retrieval enforce permissions?
+- Are negative tests adequate?
+
+### Final self-check
+1. Did I answer the actual user request rather than an adjacent general question?
+2. Are every reported file path, behavior and test result backed by evidence?
+3. Did I include security, failure, rollback and downstream effects when relevant?
+4. Can another engineer act on the recommendations without inventing missing details?
