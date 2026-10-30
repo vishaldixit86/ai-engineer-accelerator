@@ -22,3 +22,19 @@ for f in (ROOT/"core").glob("*/SKILL.md") if (ROOT/"core").exists() else []:
 for f in (ROOT/".github"/"skills").glob("*/SKILL.md"):
     assert f.read_text(encoding="utf-8").startswith("---\n"),f
 print("Catalog and available skill packages validated")
+
+# Content depth checks: reject placeholder-length or structurally thin operating guides.
+for skill in (ROOT / "core").glob("*/SKILL.md"):
+    body = skill.read_text(encoding="utf-8")
+    assert len(body) >= 2800, f"Core skill is insufficiently detailed: {skill}"
+    assert body.count("## ") >= 7, f"Core skill missing operational sections: {skill}"
+    assert "NOT RUN" in body, f"Core skill missing verification honesty: {skill}"
+for pack in (ROOT / "packs").glob("*/PACK.md"):
+    body = pack.read_text(encoding="utf-8")
+    assert len(body) >= 1200, f"Specialist pack needs more detail: {pack}"
+    assert "## " in body, f"Specialist pack missing sections: {pack}"
+for agent in (ROOT / ".github" / "agents").glob("*.agent.md"):
+    body = agent.read_text(encoding="utf-8")
+    assert len(body) >= 1800, f"Agent needs senior-level operating detail: {agent}"
+    assert "## " in body, f"Agent missing workflow sections: {agent}"
+print("Depth checks passed for present core, pack and agent files")
