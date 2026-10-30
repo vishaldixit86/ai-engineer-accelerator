@@ -59,3 +59,31 @@ Trigger: error description, failing route, logs or repro steps. Accept a terse u
 
 ## Completion criteria
 Close only when the requested outcome is implemented or explicitly blocked, changed files and decisions are identified, tests are accurately reported, and residual risks are visible. Never claim production readiness from a prompt alone.
+
+## Worked scenario: banking / FinCrime
+**Example request:** Investigate why a document parser fails only on scanned PDFs with embedded image tables.
+
+**Expected acceptance evidence:** A reproducible fixture exists; root-cause hypothesis tested against evidence; regression test reflects the failure.
+
+### Practical checklist
+- Inspect the actual project and record relevant file and function names before offering conclusions.
+- Trace input, output, error and permission flows across module boundaries.
+- Distinguish the current implementation from the proposed or hypothetical design.
+- Select checks that can prove or disprove the main risk rather than simply increasing test counts.
+- Ensure new artifacts stay in the authorized project and can be reviewed by a second engineer.
+
+### Frequent failure patterns to avoid
+- Guessing from one exception.
+- broad code changes.
+- ignoring file-format edge cases..
+
+### Review prompts
+- Does OCR fallback activate?
+- Are malformed pages isolated?
+- Is the original file preserved?
+
+### Final self-check
+1. Did I answer the actual user request rather than an adjacent general question?
+2. Are every reported file path, behavior and test result backed by evidence?
+3. Did I include security, failure, rollback and downstream effects when relevant?
+4. Can another engineer act on the recommendations without inventing missing details?
