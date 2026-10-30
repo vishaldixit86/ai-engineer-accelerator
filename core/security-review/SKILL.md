@@ -36,3 +36,29 @@ Scope and sources; prioritized findings table; affected files and rationale; thr
 
 ## Completion
 The results must let another engineer reproduce the checks and decide whether work is safe to proceed. No invented approvals or results.
+
+## Worked scenario: banking / FinCrime
+**Example request:** Review a multi-tenant investigation assistant that invokes search and graph tools.
+
+**Expected acceptance evidence:** Identity propagation, retrieval filters and tool authorization traced; threat cases validated independently.
+
+### Practical checklist
+- Inspect the actual project and record relevant file and function names before offering conclusions.
+- Trace input, output, error and permission flows across module boundaries.
+- Distinguish the current implementation from the proposed or hypothetical design.
+- Select checks that can prove or disprove the main risk rather than simply increasing test counts.
+- Ensure new artifacts stay in the authorized project and can be reviewed by a second engineer.
+
+### Frequent failure patterns to avoid
+- Assuming LLM prompts enforce permission.
+- relying on approval flags without trusted reviewer evidence..
+
+### Review prompts
+- What happens if a prompt asks for another tenant's case?
+- Does graph traversal inherit access restrictions?
+
+### Final self-check
+1. Did I answer the actual user request rather than an adjacent general question?
+2. Are every reported file path, behavior and test result backed by evidence?
+3. Did I include security, failure, rollback and downstream effects when relevant?
+4. Can another engineer act on the recommendations without inventing missing details?
