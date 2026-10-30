@@ -1,0 +1,341 @@
+{
+  "schemaVersion": "1.0",
+  "name": "AI Engineer Accelerator",
+  "release": "0.2.0-planning",
+  "defaultCore": [
+    "project-discovery",
+    "requirements",
+    "architecture",
+    "impact-analysis",
+    "implementation",
+    "debugging",
+    "code-review",
+    "test-planning",
+    "security-review",
+    "decision-log",
+    "code-flow",
+    "change-challenge",
+    "documentation",
+    "pull-request",
+    "release-readiness",
+    "project-handover",
+    "evaluation",
+    "knowledge-index"
+  ],
+  "packs": [
+    "python",
+    "react",
+    "aws",
+    "azure",
+    "graphrag",
+    "data-engineering",
+    "cybersecurity"
+  ],
+  "scenarios": [
+    {
+      "id": "new-project",
+      "title": "Start a new engineering project",
+      "skills": [
+        "requirements",
+        "architecture",
+        "implementation",
+        "test-planning"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "legacy-onboarding",
+      "title": "Understand an unfamiliar monolith",
+      "skills": [
+        "project-discovery",
+        "code-flow",
+        "project-handover"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "bug-fix",
+      "title": "Investigate and fix a defect",
+      "skills": [
+        "debugging",
+        "impact-analysis",
+        "test-planning",
+        "decision-log"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "feature-delivery",
+      "title": "Implement a feature safely",
+      "skills": [
+        "requirements",
+        "architecture",
+        "implementation",
+        "code-review",
+        "test-planning"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "fincrime-graphrag",
+      "title": "Build a FinCrime investigation application",
+      "skills": [
+        "requirements",
+        "architecture",
+        "security-review",
+        "evaluation",
+        "knowledge-index"
+      ],
+      "pack": "graphrag",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "rag-quality",
+      "title": "Improve RAG relevance and grounding",
+      "skills": [
+        "evaluation",
+        "impact-analysis",
+        "test-planning"
+      ],
+      "pack": "graphrag",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "agentic-workflow",
+      "title": "Build a tool-using multi-agent workflow",
+      "skills": [
+        "architecture",
+        "security-review",
+        "evaluation",
+        "implementation"
+      ],
+      "pack": "graphrag",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "secure-authorization",
+      "title": "Harden multi-tenant authorization",
+      "skills": [
+        "security-review",
+        "impact-analysis",
+        "test-planning",
+        "code-review"
+      ],
+      "pack": "cybersecurity",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "api-development",
+      "title": "Develop an API contract",
+      "skills": [
+        "requirements",
+        "implementation",
+        "test-planning",
+        "code-review"
+      ],
+      "pack": "python",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "frontend-delivery",
+      "title": "Develop a React UI",
+      "skills": [
+        "requirements",
+        "implementation",
+        "test-planning",
+        "code-review"
+      ],
+      "pack": "react",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "data-pipeline",
+      "title": "Build an ETL pipeline",
+      "skills": [
+        "architecture",
+        "implementation",
+        "security-review",
+        "evaluation"
+      ],
+      "pack": "data-engineering",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "cloud-infra",
+      "title": "Design cloud landing zone",
+      "skills": [
+        "architecture",
+        "security-review",
+        "release-readiness"
+      ],
+      "pack": "aws",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "incident",
+      "title": "Respond to a production incident",
+      "skills": [
+        "debugging",
+        "security-review",
+        "decision-log",
+        "project-handover"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "release",
+      "title": "Assess deployment readiness",
+      "skills": [
+        "release-readiness",
+        "test-planning",
+        "code-review",
+        "decision-log"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "handover",
+      "title": "Transfer a project between engineers",
+      "skills": [
+        "project-discovery",
+        "documentation",
+        "project-handover",
+        "code-flow"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "dependency-upgrade",
+      "title": "Upgrade dependencies safely",
+      "skills": [
+        "impact-analysis",
+        "security-review",
+        "test-planning",
+        "implementation"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "performance",
+      "title": "Investigate latency and cost",
+      "skills": [
+        "impact-analysis",
+        "debugging",
+        "evaluation"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "accessibility",
+      "title": "Review accessibility and UX acceptance",
+      "skills": [
+        "requirements",
+        "code-review",
+        "test-planning"
+      ],
+      "pack": "react",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "client-onboarding",
+      "title": "Create local project knowledge safely",
+      "skills": [
+        "project-discovery",
+        "knowledge-index",
+        "documentation"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "architecture-review",
+      "title": "Challenge architectural assumptions",
+      "skills": [
+        "architecture",
+        "change-challenge",
+        "decision-log"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "security-audit",
+      "title": "Review app risk and protection evidence",
+      "skills": [
+        "security-review",
+        "code-review",
+        "evaluation"
+      ],
+      "pack": "cybersecurity",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "python-refactor",
+      "title": "Refactor Python services",
+      "skills": [
+        "impact-analysis",
+        "implementation",
+        "test-planning",
+        "code-flow"
+      ],
+      "pack": "python",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "ci-modernization",
+      "title": "Modernize quality gates",
+      "skills": [
+        "release-readiness",
+        "security-review",
+        "test-planning"
+      ],
+      "pack": "core",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    },
+    {
+      "id": "agent-evaluation",
+      "title": "Build grounded agent evaluations",
+      "skills": [
+        "evaluation",
+        "security-review",
+        "test-planning"
+      ],
+      "pack": "graphrag",
+      "stage": "catalogued",
+      "clientDataPolicy": "project-local"
+    }
+  ],
+  "notes": "Scenarios describe recommended workflows, not prebuilt agents or execution proof. Project data stays in its approved repository."
+}
