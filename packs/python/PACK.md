@@ -1,18 +1,29 @@
-# python specialist pack
+# Python service engineering
 
-Status: **design guidance only**. This pack selects task context; it does not automatically install external frameworks, cloud resources or evaluation infrastructure.
+## Activation
+Apply to Python services and APIs when the user asks for design, implementation, troubleshooting or quality assessment.
 
-## Focus areas
-- FastAPI and Pydantic API contracts
-- async/concurrency boundaries
-- pytest, mypy and dependency hygiene
+## Discovery
+1. Determine Python version and packaging model.
+2. Inspect application entrypoints, endpoints, models and dependency injection.
+3. Map controller, service, repository and external client call paths.
+4. Check synchronous and asynchronous work, timeouts and error handling.
+5. Identify typing, formatting, test and build commands.
 
-## Recommended process
-1. Inspect the consuming project's stack and actual dependencies.
-2. Select applicable core skills; discard irrelevant guidance.
-3. Define acceptance criteria, security/privacy obligations and tests for the chosen stack.
-4. Require approval for sensitive cloud or data operations; never deploy automatically.
-5. Keep client environment data local and preserve evidence in the project repository.
+## Engineering workflow
+1. Translate the task into acceptance criteria.
+2. Check existing data contracts and backward compatibility.
+3. Design minimal changes and isolate application concerns.
+4. Implement only approved changes.
+5. Add focused unit, integration and API contract tests.
+6. Verify normal, invalid and partial-failure behavior.
+7. Document file and symbol flows and meaningful decisions.
 
-## Example task
-Review a proposed python implementation and produce a scoped plan, tradeoffs, security considerations and measured verification criteria.
+## Quality standard
+Assess correctness, resource lifetime, concurrency, dependency hygiene, maintainability, request validation and diagnostics. Report exactly which test commands were executed and outcomes.
+
+## Output
+Verified architecture map, requirements, issues, patch explanation, test results, remaining risks, and rollback if relevant.
+
+## Boundaries
+Never assume rights to deploy, change credentials or expose private client code.
