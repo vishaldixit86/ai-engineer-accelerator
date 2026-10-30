@@ -1,8 +1,38 @@
 # AI Engineer Accelerator
 
-Independent AI engineering framework: 18 core skills, seven specialist packs, and project-local context. See the component catalog and installer documentation.
+An independent, public engineering toolkit for teams working across multiple technology stacks and client projects.
 
-No HVE Core code or runtime required. Never publish client project information to this public repository.
+**Start here:** [20-minute onboarding](docs/START-HERE.md) · [24 scenario catalog](docs/SCENARIOS.md) · [platform blueprint](docs/PLATFORM-ARCHITECTURE.md) · [research benchmark](docs/RESEARCH-BENCHMARK.md).
+
+## Try it locally
+
+```powershell
+git clone https://github.com/vishaldixit86/ai-engineer-accelerator.git
+cd ai-engineer-accelerator
+python scripts/ai_engineer.py search fincrime
+python scripts/ai_engineer.py install --project C:\Projects\my-app --pack graphrag --dry-run
+python scripts/ai_engineer.py install --project C:\Projects\my-app --pack graphrag
+python scripts/validate_catalog.py
+python -m unittest discover -s tests -v
+```
+
+The project folder must already exist. The installer refuses to overwrite differing files and records the installed files for future reconciliation. It is a local file installer, **not** an autonomous coding runtime.
+
+## Capabilities
+
+- **18 original core skills** in `core/`, each with a provenance manifest
+- **7 optional specialist packs** in `packs/`
+- **24 scenario mappings** in `catalog.json`
+- **AI Engineer agents and governance guides** in `agents/`, `.github/agents/`, and `skills/`
+- **Catalog search, installation, metadata checks, and unit tests** in `scripts/` and `tests/`
+
+**Privacy:** Only reusable source assets belong in this public library. Client code, private architecture, customer documents, indexes and project evaluations remain in approved project repositories.
+
+## Maturity
+
+Core skill content is in draft review status. CI validates catalog and basic installer behavior, but security enforcement, autonomous task delegation, production knowledge graphs and assessed delivery improvements are **not implemented**.
+
+---
 
 ## Independent framework layout
 
